@@ -9,25 +9,27 @@ def DisplayInventory(inventory):
     return ''
 
 
-loot = ['coin','dragon','coin','phone']
+loot = ['dragon','coin','phone']
 
 c  = Counter(loot)
 
 
-def add(inv,added):
+def add(inv:type,added:type):
     for l in added:
-        l.capitalize()
 
         end = ' '
         if l.lower() in inv.keys():
 
             inv[l] = inv[l] + c[l]
 
+
         else:
 
             inv[l] = c[l]
 
+
     return inv
 
 
-print(add(stuff,loot))
+add(stuff,loot)
+print(DisplayInventory(stuff))
