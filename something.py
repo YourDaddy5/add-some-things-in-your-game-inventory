@@ -1,5 +1,7 @@
 from collections import Counter
 stuff = {'coin':42,'torch':2,'helmet':1,'magic egge':1}
+
+
 def DisplayInventory(inventory):
     print('Inventory: ')
     for k,v in stuff.items(): print(k, v)
@@ -7,22 +9,25 @@ def DisplayInventory(inventory):
     return ''
 
 
-loot = ['coin','dragons head','coin','d','coin','a','coin']
+loot = ['coin','dragon','coin','phone']
+
 c  = Counter(loot)
+
+
 def add(inv,added):
     for l in added:
-        if l in inv.keys():
+        l.capitalize()
+
+        end = ' '
+        if l.lower() in inv.keys():
+
             inv[l] = inv[l] + c[l]
-            break
+
         else:
-            pass
-            #ВОТ ТУТ НАДО ДОБАВИТЬ ДРУГИЕ ЭЛЕМЕНТЫ КОТОРЫХ НЕТ
 
-
+            inv[l] = c[l]
 
     return inv
-
-
 
 
 print(add(stuff,loot))
