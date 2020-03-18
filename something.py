@@ -4,7 +4,7 @@ stuff = {'coin':42,'torch':2,'helmet':1,'magic egge':1}
 
 def DisplayInventory(inventory):
     print('Inventory: ')
-    for k,v in stuff.items(): print(k, v)
+    for k,v in inventory.items(): print(k, v)
 
     return ''
 
