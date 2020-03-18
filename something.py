@@ -14,7 +14,7 @@ loot = ['dragon','coin','phone']
 c  = Counter(loot)
 
 
-def add(inv:type,added:type):
+def add(inv:dict,added:list):
     for l in added:
 
         end = ' '
