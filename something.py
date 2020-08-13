@@ -1,5 +1,5 @@
 from collections import Counter
-stuff = {'coin':42,'torch':2,'helmet':1,'magic egge':1}
+stuff = {'coin':0,'torch':2,'helmet':1,'magic egge':1}
 
 
 def DisplayInventory(inventory):
@@ -9,12 +9,12 @@ def DisplayInventory(inventory):
     return ''
 
 
-loot = ['dragon','coin','phone']
+loot = {'dragon head': 0,'coin':45,'phone':1}
 
 c  = Counter(loot)
 
 
-def add(inv:dict,added:list):
+def add(inv:dict,added):
     for l in added:
 
         end = ' '
@@ -30,6 +30,6 @@ def add(inv:dict,added:list):
 
     return inv
 
-
+print(DisplayInventory(stuff))
 add(stuff,loot)
 print(DisplayInventory(stuff))
